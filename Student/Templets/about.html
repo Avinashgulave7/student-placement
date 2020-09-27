@@ -1,0 +1,482 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{%static 'scss/main.css' %}">
+    <link rel="stylesheet" href="{%static 'scss/skin.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="{%static './script/index.js' %}"></script>
+
+</head>
+
+<body id="wrapper">
+
+    <section id="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 top-header-links">
+                    <ul class="contact_links">
+                        <li><i class="fa fa-phone"></i><a href="#">+91 9075532517</a></li>
+                        <li><i class="fa fa-envelope"></i><a href="#">gulaveavinash17@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul class="social_links">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+                    <a class="navbar-brand" href="#">
+                        <h1>PVP College</h1><span>pravaranagar</span></a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li class="active"><a href="#about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        {% if user.is_authenticated %}
+                            <li> Hello, <span>{{user.first_name}}</span></li>
+                            
+                             <li><a href="logout">Logout</a></li>
+                            {% else %}
+                            
+                            
+                            <li><a href="signin">Sign In</a></li>
+                            <li><a href="signup">Sign Up</a></li>
+                            
+                            {% endif %}
+                       
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!--/.nav-ends -->
+    </header>
+    <section id="top_banner">
+        <div class="banner">
+            <div class="inner text-center">
+                <h2>Compus Drive</h2>
+            </div>
+        </div>
+        <div class="page_info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-6">
+                        <h4>About</h4>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6" style="text-align:right;">Home<span class="sep"> 	/ </span><span class="current"> About</span></div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+
+    <section id="about-page-section-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7 text-align">
+                    <div class="section-heading">
+                        <h2>About <span>Us</span></h2>
+                        <p class="subheading">History of college.</p>
+                    </div>
+                    <p>
+                        Padmashri Vikhe Patil College of Arts, Science and Commerce, Pravaranagar, was established in June, 1971 under the aegis of Pravara Rural Education Society, Pravaranagar. The College is located in rural area in Ahmednagar district of Maharashtra and has been catering to the educational needs for the boys and girls of surrounding 44 villages. The college has around 52 Acres lush green and sprawling campus equipped with ultra-modern facilities for teaching, learning and research.
+
+                        <br><br>The college is permanently affiliated to the Savitribai Phule Pune University,Pune and is approved u/s 2(f) and 12 (b) of the UGC act.
+
+						<br><br>The college has Arts, Science and Commerce faculties. It offers education at under graduate and post graduate level. There are 20 under graduate and 18 post graduate courses along with 07 research centres and 14 certificate courses. The college has started Diploma in Sugar industry and Processing and Advance Diploma in Dairy Science under community college scheme sponsored by UGC, New Delhi in 2014. It is the only institute which offers restructuring pattern for UG under affiliating University, which is started in 1983 to encourage the multidisciplinary studies. The need based, skill oriented and personality development courses of the restructuring pattern have evoked tremendous response from the students.
+
+						<br><br>The college has 147 teaching and 259 non-teaching staff. In the academic year 2018-19 a total of 2953 students are pursuing education in the college. The college also offers B.A and B.Com degree programmes for dropout and employed students under YCMOU, Nashik.
+
+						<br><br>The college has been honored twice with The Best Rural College Award in 2001-02 and 2009-10 from the Savitribai Phule Pune University.
+
+						<br><br>The college is ISO 9001-2008 certified. It is bestowed with Star College by DBT in 2010. The college was Accredited 'A+' grade and Re-Accredited 'A' grade with CGPA 3.61 by the NAAC in 2012 and has been recognized as the College of Excellence by UGC, New Delhi in 2014.
+
+						<br><br>Dr. Abdul Kalam Science and Innovation Activity Centre started in collaboration with Government of Maharashtra Rajiv Gandhi Science and Technology Commission and National Council of Science Museums (NCSM) under the Ministry of Culture, Government of India. Technology and Design Innovation Centre (DIC)-Spoke centre of SPPU is established.
+
+						<br><br>Along with conventional courses the college offers vocational courses like Seed Technology, Functional English & Computer Application.
+
+						<br><br>The degree courses in Computer Science, Biotechnology and Library & Information Science along with PG programs in computer, biotechnology are also available. Some bridge, remedial and add-on courses have been introduced for slow and advanced learners.
+
+						<br><br>The college has been supporting poor, intelligent and needy students through Earn and Learn Scheme since its inception.
+
+						<br><br>Active placement and career guidance cell helps students in fetching on and off campus jobs. The extra-curricular activities like NSS and NCC are helpful in developing good citizens of India.
+
+
+                        
+                    </p>
+                    
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                    <img height="" width="auto" src="{%static 'img/Sliderimg3.jpg' %}" class="attachment-full img-responsive" alt="">
+                     
+                </div>
+                
+                
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                    <img height="" width="auto" src="{%static 'img/Science Building.jpg' %}" class="attachment-full img-responsive" alt="">
+                     
+                </div>
+                
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                    <img height="" width="auto" src="{%static 'img/Sliderimg1.jpg' %}" class="attachment-full img-responsive" alt="">
+                     
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                    <img height="" width="auto" src="{%static 'img/Sliderimg2.jpg' %}" class="attachment-full img-responsive" alt="">
+                     
+                </div>
+                
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                    <img height="" width="auto" src="{%static 'img/MultipurposeHall.jpg' %}" class="attachment-full img-responsive" alt="">
+                     
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="skills">
+        <div class="titlebar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 xol-md-12 col-sm-12 col-xs-12">
+                        <div class="section-heading text-center">
+                            <h2>Our <span>Placement Student</span></h2>
+                            <p class="subheading">All our dreams can come true,if we have the courage to pursue them.</p>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
+                                <div class="progress color progress-bar-1">
+                                    <span class="progress-left">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">60%</div>
+
+                                </div>
+                                <div class="progress-title">
+                                    <h5>Arts Students</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
+                                <div class="progress color progress-bar-2">
+                                    <span class="progress-left">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">85%</div>
+                                </div>
+                                <div class="progress-title">
+                                    <h5>Science Students</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
+                                <div class="progress color progress-bar-3">
+                                    <span class="progress-left">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">70%</div>
+                                </div>
+                                <div class="progress-title">
+                                    <h5>Commerce Students</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
+                                <div class="progress color progress-bar-4">
+                                    <span class="progress-left">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">68%</div>
+                                </div>
+                                <div class="progress-title">
+                                    <h5>Others</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <section id="team-member">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 xol-md-12 col-sm-12 col-xs-12">
+                    <div class="section-heading text-center">
+                        <h1>Our <span>Team</span></h1>
+                        <p class="subheading">The best education is not given to students; it is drawn out of them. It is the supreme art of the teacher to awaken joy in creative expression and knowledge. Good teaching is more a giving of right questions than a giving of right answers.</p>
+                    </div>
+                    <div class="wpb_column vc_column_container col-md-3 col-sm-6 col-xs-6 block mybox">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="our-team main-info-below-image">
+                                    <div class="our-team-inner">
+                                        <div class="our-team-image">
+                                            <img src="{%static 'img/PrincipleSir - Copy.jpg' %}" />
+                                            <div class="qodef-circle-animate"></div>
+                                            <div class="our-team-position-icon">
+                                                <span class="qodef-icon-shortcode circle">
+        			<i class="qodef-icon-simple-line-icon qodef-icon-element fa fa-cog"></i>
+            </span>
+                                            </div>
+                                            <h6 class="q_team_position">Principle</h6>
+                                        </div>
+                                        <div class="our-team-info">
+                                            <div class="our-team-title-holder">
+                                                <h5 class="our-team-name">Dr.P.M.Dighe</h5>
+                                            </div>
+                                            <div class='our-team-text-inner'>
+                                                <div class='our-team-description'>
+                                                    <p>P.H.D</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container col-md-3 col-sm-6 col-xs-6 block mybox">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="our-team main-info-below-image">
+                                    <div class="our-team-inner">
+                                        <div class="our-team-image">
+                                            <img src="{%static 'img/images.jpg' %}" />
+                                            <div class="qodef-circle-animate"></div>
+                                            <div class="our-team-position-icon">
+                                                <span class="qodef-icon-shortcode circle">
+        				<i class="qodef-icon-simple-line-icon fa fa-pencil qodef-icon-element"></i>
+    					</span>
+                                            </div>
+                                            <h6 class="q_team_position">Placement Head</h6>
+                                        </div>
+                                        <div class="our-team-info">
+                                            <div class="our-team-title-holder">
+                                                <h5 class="our-team-name">Aaher sir</h5>
+                                            </div>
+                                            <div class='our-team-text-inner'>
+                                                <div class='our-team-description'>
+                                                    <p>Chemistri</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container col-md-3 col-sm-6 col-xs-6 block mybox">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <div class="our-team main-info-below-image">
+                                    <div class="our-team-inner">
+                                        <div class="our-team-image">
+                                            <img src="{%static 'img/images.jpg' %}" />
+                                            <div class="qodef-circle-animate"></div>
+                                            <div class="our-team-position-icon">
+                                                <span class="qodef-icon-shortcode circle">        
+        					<i class="qodef-icon-simple-line-icon fa fa-hashtag qodef-icon-element"></i>
+            		</span>
+                                            </div>
+                                            <h6 class="q_team_position">PG Director</h6>
+                                        </div>
+                                        <div class="our-team-info">
+                                            <div class="our-team-title-holder">
+                                                <h5 class="our-team-name">Dube sir</h5>
+                                            </div>
+                                            <div class='our-team-text-inner'>
+                                                <div class='our-team-description'>
+                                                    <p>PHD Computer science and Engineering</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container col-md-3 col-sm-6 col-xs-6 block mybox">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <div class="our-team main-info-below-image">
+                                    <div class="our-team-inner">
+                                        <div class="our-team-image">
+                                            <img src="{%static 'img/images.jpg' %}" />
+                                            <div class="qodef-circle-animate"></div>
+                                            <div class="our-team-position-icon">
+                                                <span class="qodef-icon-shortcode circle ">
+						        <i class="qodef-icon-simple-line-icon fa fa-wrench qodef-icon-element" ></i>
+			            </span>
+                                            </div>
+                                            <h6 class="q_team_position">Placement Manager </h6>
+                                        </div>
+                                        <div class="our-team-info">
+                                            <div class="our-team-title-holder">
+                                                <h5 class="our-team-name">Shelke sir</h5>
+                                            </div>
+                                            <div class='our-team-text-inner'>
+                                                <div class='our-team-description'>
+                                                    <p>Science</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Address</h4>
+                        <hr/>
+                        <p>Padmashri Vikhe Patil College Of Arts Science & Commerce, Pravaranagar Tal-Rahata Dist-Ahmednagar,- 413713 Maharashtra, India.
+                        </p>
+                        <a href="contact" class="learnmore">Learn More <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Useful Links</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            <li><a href="signin">Sign In</a></li>
+                            <li><a href="signup">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Contact</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="contact">Email : pvpcollege@gmail.com</a></li>
+                            <li><a href="contact">Tel. : (02422),273425</a></li>
+                            <li><a href="contact">Fax : (02422),273426</a></li>
+                        </ul>
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 <block></block>">
+                    <div class="footer-block">
+                    
+                    <div class="container">
+                        <div class="row footer-widgets" style="min-height: -200px;">
+         
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="footer-widget twitter-widget">
+                                    <h4>Location Map<span class="head-line"></span></h4>
+
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.07595077574!2d74.47234871438435!3d19.581246540985788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcf6eb393e430d%3A0x289be515cef4c7c8!2sPadmashri+Vikhe+Patil+College+of+Arts%2C+Science+and+Commerce%2C+Pravaranagar!5e0!3m2!1sen!2sin!4v1538545250374" height="205" frameborder="0" style="border: 0; width: 100%" allowfullscreen></iframe>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
+                    </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+                    Developed by <a href="#">PVP College</a> designed by <a href="#">Avinash Gulave</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="panel">
+        <div id="panel-admin">
+            <div class="panel-admin-box">
+                <div id="tootlbar_colors">
+                    <button class="color" style="background-color:#1abac8;" onclick="mytheme(0)"></button>
+                    <button class="color" style="background-color:#ff8a00;" onclick="mytheme(1)"> </button>
+                    <button class="color" style="background-color:#b4de50;" onclick="mytheme(2)"> </button>
+                    <button class="color" style="background-color:#e54e53;" onclick="mytheme(3)"> </button>
+                    <button class="color" style="background-color:#1abc9c;" onclick="mytheme(4)"> </button>
+                    <button class="color" style="background-color:#159eee;" onclick="mytheme(5)"> </button>
+                </div>
+            </div>
+
+        </div>
+        <a class="open" href="#"><span><i class="fa fa-gear fa-spin"></i></span></a>
+    </div>
+
+
+</body>
+    
+</html>

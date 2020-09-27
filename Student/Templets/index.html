@@ -1,0 +1,461 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{%static 'scss/main.css' %}">
+    <link rel="stylesheet" href="{%static 'scss/skin.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="{%static './script/index.js' %}"></script>
+</head>
+
+<body id="wrapper">
+
+    <section id="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-7 col-xs-7 top-header-links">
+                    <ul class="contact_links">
+                        <li><i class="fa fa-phone"></i><a href="#">(02422),273425</a></li>
+                        <li><i class="fa fa-envelope"></i><a href="contact">pvpcollege@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 social">
+                    <ul class="social_links">
+                        <li><a href="http://www.pravarapvpcollege.org.in/"><i class="fa fa-google"></i></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+                        <a class="navbar-brand" href="#">
+                            <h1>PVP college</h1><span>Pravaranager</span></a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            
+                            {% if user.is_authenticated %}
+                            <li> Hello, <span>{{user.first_name}}</span></li>
+                            
+                             <li><a href="logout">Logout</a></li>
+                            {% else %}
+                            
+                            
+                            <li><a href="signin">Sign In</a></li>
+                            <li><a href="signup">Sign Up</a></li>
+                            
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/.nav-ends -->
+
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('{%static 'img/sliderimg1.jpg'%}');"></div>
+                <div class="carousel-caption slide-up">
+                    <h1 class="banner_heading"> <span>Compus Drive </span></h1>
+                    <p class="banner_txt">Focused and talented.Are traits of successful people.You have them in you and I know your day of success is not too far.</p>
+                    <div class="slider_btn">
+                       
+                        <button type="button" class="btn btn-primary slide">
+                             {% if user.is_authenticated %}
+                            
+						<a href="apply" class="btn btn-success">Apply Now</a> <i class="fa fa-caret-right"></i></button>
+						  {% else %}
+                        
+                        
+                        <a href="signin">Apply Now</a> <i class="fa fa-caret-right"></i></button>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="fill" style="background-image:url('{%static 'img/sliderimg3.jpg' %}');"></div>
+                <div class="carousel-caption slide-up">
+                    <h1 class="banner_heading"><span>Compus Drive </span></h1>
+                    <p class="banner_txt">Happiness is getting placed in dream companies after all the sleepless nights you've spent.</p>
+                    <div class="slider_btn">
+                        
+						<button type="button" class="btn btn-primary slide">
+                             {% if user.is_authenticated %}
+                            
+						<a href="apply" class="btn btn-success">Apply Now</a> <i class="fa fa-caret-right"></i></button>
+						  {% else %}
+                        
+                        
+                        <a href="signin">Apply Now</a> <i class="fa fa-caret-right"></i></button>
+                        {% endif %}
+                                            </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="fill" style="background-image:url('{%static 'img/slider_img.jpg' %}');"></div>
+                <div class="carousel-caption slide-up">
+                    <h1 class="banner_heading"> <span>Compus Drive </span></h1>
+                    <p class="banner_txt">Is's all about placing yourself!! A drop ofrain falling on dust becomes muddy,The same drop becomes a dew on leaf and a pearl on an Oyster.</p>
+                    <div class="slider_btn">
+                        <button type="button" class="btn btn-primary slide">
+                             {% if user.is_authenticated %}
+                            
+						<a href="apply" class="btn btn-success">Apply Now</a> <i class="fa fa-caret-right"></i></button>
+						  {% else %}
+                        
+                        
+                        <a href="signin">Apply Now</a> <i class="fa fa-caret-right"></i></button>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12 block">
+                   
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="image-holder col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
+            <div class="background-imgholder">
+            
+                <img src="{%static 'img/sliderimg3.jpg' %}" alt="about" class="img-responsive" />
+                 <img src="{%static 'img/sliderimg1.jpg' %}" alt="about" class="img-responsive" />
+                  <img src="{%static 'img/sliderimg2.jpg' %}" alt="about" class="img-responsive" />
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="col-md-7 col-md-offset-5 col-sm-8 col-sm-offset-2 col-xs-12 text-inner ">
+                <div class="text-block">
+                    <div class="section-heading">
+                        <h1>ABOUT <span>US</span></h1>
+                        <p class="subheading">Histroy of college .</p>
+                    </div>
+
+                    <ul class="aboutul">
+                        <li> <i class="fa fa-check"></i>Padmashri Vikhe Patil College of Arts, Science and Commerce, Pravaranagar, was established in June, 1971 under the aegis of Pravara Rural Education Society, Pravaranagar. The College is located in rural area in Ahmednagar district of Maharashtra and has been catering to the educational needs for the boys and girls of surrounding 44 villages. The college has around 52 Acres lush green and sprawling campus equipped with ultra-modern facilities for teaching, learning and research.</li>
+                        <li> <i class="fa fa-check"></i>The college is permanently affiliated to the Savitribai Phule Pune University,Pune and is approved u/s 2(f) and 12 (b) of the UGC act..</li>
+                        
+                        <li> <i class="fa fa-check"></i>The college is ISO 9001-2008 certified. It is bestowed with Star College by DBT in 2010. The college was Accredited 'A+' grade and Re-Accredited 'A' grade with CGPA 3.61 by the NAAC in 2012 and has been recognized as the College of Excellence by UGC, New Delhi in 2014.</li>
+                        <li> <i class="fa fa-check"></i>Along with conventional courses the college offers vocational courses like Seed Technology, Functional English & Computer Application.</li>
+                        <li> <i class="fa fa-check"></i>The college has been supporting poor, intelligent and needy students through Earn and Learn Scheme since its inception.</li>
+                        <li> <i class="fa fa-check"></i>Active placement and career guidance cell helps students in fetching on and off campus jobs. The extra-curricular activities like NSS and NCC are helpful in developing good citizens of India.</li>                          
+                    </ul>
+
+                    <button type="button" class="btn btn-primary slide"><a href="about">Learn More </a>  <i class="fa fa-caret-right"></i> </button>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="process">
+        <div class="container">
+            <div class="section-heading text-center">
+                <div class="col-md-20 col-xs-20">
+                    <h1><span></span></h1>
+                  <section id="skills">
+        <div class="titlebar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 xol-md-12 col-sm-12 col-xs-12">
+                        <div class="section-heading text-center">
+                            <h2>Our <span>Placement Student</span></h2>
+                            <p class="subheading">All our dreams can come true,if we have the courage to pursue them.</p>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
+                                <div class="progress color progress-bar-1">
+                                    <span class="progress-left">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">60%</div>
+
+                                </div>
+                                <div class="progress-title">
+                                    <h5>Arts Students</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
+                                <div class="progress color progress-bar-2">
+                                    <span class="progress-left">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">85%</div>
+                                </div>
+                                <div class="progress-title">
+                                    <h5>Science Students</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
+                                <div class="progress color progress-bar-3">
+                                    <span class="progress-left">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">70%</div>
+                                </div>
+                                <div class="progress-title">
+                                    <h5>Commerce Students</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
+                                <div class="progress color progress-bar-4">
+                                    <span class="progress-left">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value">88%</div>
+                                </div>
+                                <div class="progress-title">
+                                    <h5>Over All</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </section>
+                    
+        </div>
+    </section>
+
+
+    <section id="testimonial">
+        <div class="container">
+            <div class="section-heading text-center">
+                <div class="col-md-12 col-xs-12">
+                    <h1>What Our <span>Techers Says</span></h1>
+                    <p class="subheading"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-12 block ">
+                    <div class="testimonial_box">
+                        <p>Education is the most powerful weapon you can use to change the world. </p>
+                    </div>
+                    <div class="arrow-down"></div>
+                    <div class="testimonial_user">
+                        <div class="user-image"><img src="{%static 'img/PrincipleSir - Copy.jpg' %}" alt="user" class="img-responsive" /></div>
+                        <div class="user-info">
+                            <h5>Dr P.M.Dighe</h5>
+                            <p>Principle</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-12 block">
+                    <div class="testimonial_box">
+                        <p>Teachers can open the door, but you must enter it yourself. </p>
+                    </div>
+                    <div class="arrow-down"></div>
+                    <div class="testimonial_user">
+                        <div class="user-image"><img src="{%static 'img/images.jpg' %}" alt="user" class="img-responsive" /></div>
+                        <div class="user-info">
+                            <h5>Galande Mam</h5>
+                            <p>Vice Principle</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 block">
+                    <div class="testimonial_box">
+                        <p>The beautiful thing about learning is that no one can take it away from you.</p>
+                    </div>
+                    <div class="arrow-down"></div>
+                    <div class="testimonial_user">
+                        <div class="user-image"><img src="{%static 'img/images.jpg' %}" alt="user" class="img-responsive" /></div>
+                        <div class="user-info">
+                            <h5>Aaher sir</h5>
+                            <p>Placement Head</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+     <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Address</h4>
+                        <hr/>
+                        <p>Padmashri Vikhe Patil College Of Arts Science & Commerce, Pravaranagar Tal-Rahata Dist-Ahmednagar,- 413713 Maharashtra, India.
+                        </p>
+                        <a href="contact" class="learnmore">Learn More <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Useful Links</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="about">About Us</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            <li><a href="signin">Sign In</a></li>
+                            <li><a href="signup">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Contact</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="contact">Email : pvpcollege@gmail.com</a></li>
+                            <li><a href="contact">Tel. : (02422),273425</a></li>
+                            <li><a href="contact">Fax : (02422),273426</a></li>
+                        </ul>
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 <block></block>">
+                    <div class="footer-block">
+                    
+                    <div class="container">
+                        <div class="row footer-widgets" style="min-height: -200px;">
+         
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="footer-widget twitter-widget">
+                                    <h4>Location Map<span class="head-line"></span></h4>
+
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.07595077574!2d74.47234871438435!3d19.581246540985788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcf6eb393e430d%3A0x289be515cef4c7c8!2sPadmashri+Vikhe+Patil+College+of+Arts%2C+Science+and+Commerce%2C+Pravaranagar!5e0!3m2!1sen!2sin!4v1538545250374" height="205" frameborder="0" style="border: 0; width: 100%" allowfullscreen></iframe>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
+                    </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+                    Developed by <a href="#">PVP College</a> designed by <a href="#">Avinash Gulave</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="panel">
+        <div id="panel-admin">
+            <div class="panel-admin-box">
+                <div id="tootlbar_colors">
+                    <button class="color" style="background-color:#1abac8;" onclick="mytheme(0)"></button>
+                    <button class="color" style="background-color:#ff8a00;" onclick="mytheme(1)"> </button>
+                    <button class="color" style="background-color:#b4de50;" onclick="mytheme(2)"> </button>
+                    <button class="color" style="background-color:#e54e53;" onclick="mytheme(3)"> </button>
+                    <button class="color" style="background-color:#1abc9c;" onclick="mytheme(4)"> </button>
+                    <button class="color" style="background-color:#159eee;" onclick="mytheme(5)"> </button>
+                </div>
+            </div>
+
+        </div>
+        <a class="open" href="#"><span><i class="fa fa-gear fa-spin"></i></span></a>
+    </div>
+
+
+</body>
+    
+</html>
